@@ -1,0 +1,64 @@
+#landing_page {
+    padding: 8rem 0;
+    // background: url("../assets/bg_2.jpg");
+    // background: linear-gradient(
+    //      135deg,
+    //      rgba(13, 92, 117, 1) 0%,
+    //      rgba(25, 159, 177, 1) 50%,
+    //      rgba(165, 209, 225, 1) 100%
+    //  );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    isolation: isolate;
+
+    min-height: 80vh;
+    // border-bottom: 2px solid;
+}
+
+// section .animate {
+//     transition: 1s;
+// }
+
+.banner_heading {
+    @include flex_items_center;
+    justify-content: center;
+}
+
+.banner_name {
+    font-size: 3rem;
+}
+
+// .tilt_1 {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     overflow: hidden;
+//     line-height: 0;
+// }
+
+// .tilt_1 svg {
+//     position: relative;
+//     display: block;
+//     width: calc(100% + 1.3px);
+//     height: 150px;
+// }
+
+// #landing_page::after {
+//     content: '';
+//     position: absolute;
+//     background: linear-gradient(
+//         135deg,
+//         rgba(13, 92, 117, 1) 0%,
+//         rgba(25, 159, 177, 1) 50%,
+//         rgba(165, 209, 225, 1) 100%
+//     );
+//         inset: 0;
+//     transform: skewY(5deg) translateY(60px);
+
+//     z-index: -1;
+// }
+
+//Landing page ends

@@ -1,0 +1,89 @@
+#about_page {
+    background-color: $dark_shade;
+    padding: 2rem 0;
+    color: $light_shade;
+}
+
+#about_page > * {
+    @include center_content;
+}
+
+.why_me_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "description"
+        "img";
+    gap: 2rem;
+    padding: 2rem 0 0 0;
+}
+
+@media screen and (min-width: 700px) {
+    .why_me_section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "description img";
+    }
+}
+
+#why_me_heading {
+    text-align: center;
+}
+
+.description {
+    grid-area: description;
+    line-height: 2rem;
+}
+
+.why_me_img {
+    grid-area: img;
+}
+
+.why_me_image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: baseline;
+}
+
+.skill {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: column;
+    width: 20%;
+}
+
+.skill_logo {
+    width: 2rem;
+    text-align: center;
+}
+
+.skill_logo:hover {
+    animation: bounce2 1s ease-in infinite;
+}
+@keyframes bounce2 {
+    30% {
+        transform: scale(1.5);
+    }
+    40%,
+    60% {
+        transform: rotate(-20deg) scale(1.5);
+    }
+    50% {
+        transform: rotate(20deg) scale(1.5);
+    }
+    70% {
+        transform: rotate(0deg) scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.skill_name {
+    font-weight: 600;
+}
+//About page ends
+

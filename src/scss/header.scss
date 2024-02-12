@@ -1,0 +1,211 @@
+/***HEADER START***/
+
+.brand_name,
+.my_img {
+    font-weight: 600;
+    z-index: 2;
+    position: relative;
+    color: $dark_shade;
+}
+
+.header_navigation {
+    // background: hsla(0, 0%, 9%, 0.7);
+    @include flex_items_center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    width: 100%
+}
+
+.header_navigation.sticky {
+    position: fixed;
+    background-color: $white;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    transition: background-color 500ms ease-in-out;
+    z-index: 9999;
+}
+
+.branding {
+    @include flex_items_center;
+    gap: 0.5rem;
+}
+
+.my_img img {
+    height: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.navigation {
+    @include flex_items_center;
+    gap: 0.5rem;
+}
+
+.primary_navigation {
+    display: flex;
+    gap: clamp(1rem, 4vw, 4rem);
+
+    li {
+        list-style: none;
+        position: relative;
+
+        a {
+            text-decoration: none;
+            color: $dark_shade;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}
+
+.primary_navigation li a::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -5px;
+    background-color: $dark_accent;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in;
+    transform-origin: right;
+}
+
+.primary_navigation li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/**Hamburger-menu**/
+
+#hamburger-wrapper {
+    @include flex_items_center;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.burger {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.burger,
+.burger:before,
+.burger:after {
+    padding: 0;
+    background-color: $dark_shade;
+    width: 80%;
+    height: 3px;
+    transition:
+        margin 0.1s 0.2s,
+        transform 0.2s;
+}
+
+.burger:before,
+.burger:after {
+    margin: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.burger:before {
+    margin-top: -12px;
+}
+
+.burger:after {
+    margin-top: 12px;
+}
+
+/* STYLES FOR OUR BURGER WHEN THE MENU OPENS */
+.open .burger {
+    transform: rotate(45deg);
+}
+
+.open .burger,
+.open .burger:before,
+.open .burger:after {
+    transition:
+        margin 0.2s,
+        transform 0.1s 0.2s;
+}
+
+.open .burger:before,
+.open .burger:after {
+    margin-top: 0;
+}
+
+.open .burger:after {
+    transform: rotate(-90deg);
+}
+
+/**Hamburger-menu ends**/
+
+@media (max-width: 800px) {
+
+    .brand_name {
+        display: none;
+    }
+    .primary_navigation {
+        position: fixed;
+        inset: 0 0 0 0%;
+        flex-direction: column;
+        padding: min(20vh, 10rem) 2rem;
+        background: hsla(0, 0, 0, 0.5);
+        gap: 2em;
+        z-index: 1000;
+        transform: translateX(100%);
+        align-items: center;
+
+        li {
+            display: block;
+            text-align: center;
+            padding: 1rem 0;
+            transition: 250ms ease-in;
+            width: 100%;
+        }
+
+        li:hover {
+            background-color: $dark_shade;
+            transition: 250ms ease-in;
+            cursor: pointer;
+        }
+
+        li:hover {
+            a {
+                color: $light_shade;
+            }
+        }
+
+        li a::before {
+            height: 0;
+        }
+    }
+
+    .primary_navigation {
+        &[data-visible="true"] {
+            transform: translateX(0%);
+            transition: transform 350ms ease-out;
+        }
+    }
+
+    #hamburger-wrapper {
+        z-index: 9999;
+        display: flex;
+    }
+
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary_navigation {
+            background: hsl(0, 0, 100%, 0.1);
+            backdrop-filter: blur(1rem);
+        }
+    }
+}
+
+/***HEADER END***/

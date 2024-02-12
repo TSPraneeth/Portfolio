@@ -1,0 +1,96 @@
+@import "colors.scss";
+@import "mixins.scss";
+@import "preloader.scss";
+@import "header.scss";
+@import "landing.scss";
+@import "about.scss";
+@import "experience.scss";
+@import "projects.scss";
+@import "contact.scss";
+@import "footer.scss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    //   background: url("../assets/bg_3.jpg");
+    // background: linear-gradient(#50D5B7, #067D68);
+    // background: rgb(13, 92, 117);
+    // background: linear-gradient(
+    //     135deg,
+    //     rgba(13, 92, 117, 1) 0%,
+    //     rgba(25, 159, 177, 1) 50%,
+    //     rgba(165, 209, 225, 1) 100%
+    // );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    // min-height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+    color: $dark_shade;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+    background-color: $light_shade;
+}
+
+.heading_animate {
+    font-size: 2em;
+}
+
+/***MAIN Start***/
+
+.scroll_watcher {
+    position: fixed;
+    height: 5px;
+    background-color: $brand;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    scale: 0 1;
+    animation: scroll_watcher linear;
+    transform-origin: left;
+    animation-timeline: scroll() ;
+}
+
+@keyframes scroll_watcher {
+    to { scale: 1 1;}
+}
+
+.highlight_word {
+    color: $dark_accent;
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+footer {
+    padding: 0 0 2rem 0;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    display: none;
+}
+
+.svg_test
+{
+    width: 100%;
+    
+}

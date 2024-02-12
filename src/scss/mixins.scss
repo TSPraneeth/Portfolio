@@ -1,0 +1,20 @@
+@mixin center_content {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+@mixin text_center {
+    text-align: center;
+}
+
+@mixin flex_items_center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin background_props {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // height: 300px;
+}

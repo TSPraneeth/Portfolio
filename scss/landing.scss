@@ -17,6 +17,43 @@
     // border-bottom: 2px solid;
 }
 
+.sticky-social{
+    position:fixed;
+    top:150px;
+    left:0px;
+    padding:0px;
+    margin:0px;
+  }
+  .social{
+    list-style:none;
+  }
+  .social li{
+    padding:10px 10px;
+    font-size:25px;
+    transition:all 0.8s ease-in-out;
+  }
+  .social li:hover{
+      margin-right:-30px;
+   box-shadow:2px 5px 10px grey;
+  }
+  .social li:hover .fa{
+      margin-left:20px;
+    
+  }
+  .fa{
+    color:#fff;
+    transition:all 0.8s ease-in-out;
+  }
+  .linkedinn{
+    background-color:#0a66c2;
+  }
+  .githubb{
+      background-color:#6e5494;
+  }
+  .instaa{
+      background-color:#c32aa3;
+  }
+
 // section .animate {
 //     transition: 1s;
 // }

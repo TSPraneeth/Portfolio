@@ -60,6 +60,7 @@
   z-index: 2;
   position: relative;
   color: #2F2C38;
+  text-decoration: none;
 }
 
 .header_navigation {
@@ -252,7 +253,7 @@
   background-size: cover;
   position: relative;
   isolation: isolate;
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
 .banner_heading {
@@ -514,6 +515,86 @@
 }
 
 .project_1 {
+  text-decoration: none;
+  color: #F3EFDB;
+}
+
+.project_1:hover {
+  transform: scale(1.2);
+  transition: transform 500ms ease-in-out;
+}
+
+.project_2 {
+  text-decoration: none;
+  color: #F3EFDB;
+}
+
+.project_2:hover {
+  transform: scale(1.2);
+  transition: transform 500ms ease-in-out;
+}
+
+.project_3 {
+  text-decoration: none;
+  color: #F3EFDB;
+}
+
+.project_3:hover {
+  transform: scale(1.2);
+  transition: transform 500ms ease-in-out;
+}
+
+.project_4 {
+  text-decoration: none;
+  color: #F3EFDB;
+}
+
+.project_4:hover {
+  transform: scale(1.2);
+  transition: transform 500ms ease-in-out;
+}
+
+.project_5 {
+  text-decoration: none;
+  color: #F3EFDB;
+}
+
+.project_5:hover {
+  transform: scale(1.2);
+  transition: transform 500ms ease-in-out;
+}
+
+.project_6 {
+  text-decoration: none;
+  color: #F3EFDB;
+}
+
+.project_6:hover {
+  transform: scale(1.2);
+  transition: transform 500ms ease-in-out;
+}
+
+.project_7 {
+  text-decoration: none;
+  color: #F3EFDB;
+}
+
+.project_7:hover {
+  transform: scale(1.2);
+  transition: transform 500ms ease-in-out;
+}
+
+.project_8 {
+  text-decoration: none;
+  color: #F3EFDB;
+}
+
+.project_8:hover {
+  transform: scale(1.2);
+  transition: transform 500ms ease-in-out;
+}
+
+.project_1 {
   background: url(../assets/projects/fit+.JPG);
   background-size: cover;
   background-repeat: no-repeat;
@@ -721,6 +802,24 @@ input[type=submit]:hover {
 }
 .contact_image_side ul li a:hover:nth-child(4) {
   color: #dd4b39;
+}
+
+#downloadLink {
+  text-decoration: none;
+  color: #2F2C38;
+  padding: 1rem 0.5rem;
+  border-radius: 30px;
+  background-color: #F3EFDB;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+#downloadLink:hover {
+  background-color: #3dc4d3;
+  color: #2F2C38;
+  transition: 500ms ease-in-out;
 }
 
 html {

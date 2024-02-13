@@ -38,6 +38,18 @@
     transition: transform 250ms ease-in;
 }
 
+@for $i from 1 through 8 {
+    .project_#{$i} {
+        text-decoration: none;
+        color: $light_shade;
+    }
+
+    .project_#{$i}:hover {
+      transform: scale(1.2);
+      transition: transform 500ms ease-in-out;
+    }
+  }
+
 .project_1
 {
     background: url(../assets/projects/fit+.JPG);

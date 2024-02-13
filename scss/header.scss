@@ -6,6 +6,7 @@
     z-index: 2;
     position: relative;
     color: $dark_shade;
+    text-decoration: none
 }
 
 .header_navigation {
@@ -28,6 +29,7 @@
     @include flex_items_center;
     gap: 0.5rem;
 }
+
 
 .my_img img {
     height: 50px;

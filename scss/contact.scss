@@ -175,3 +175,21 @@ input[type="submit"]:hover {
     color: #dd4b39;
   }
 }
+
+#downloadLink {
+  text-decoration: none;
+  color: $dark_shade;
+  padding: 1rem .5rem;
+  border-radius: 30px;
+  background-color: $light_shade;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+#downloadLink:hover {
+  background-color: $dark_accent;
+  color: $dark_shade;
+  transition: 500ms ease-in-out;
+}

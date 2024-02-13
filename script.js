@@ -71,18 +71,17 @@ navLink.forEach(function (link) {
 //Change URL based on scroll
 
 window.addEventListener("scroll", function () {
-  // Get the current scroll position 
   var scrollPosition = window.scrollY;
-  // console.log(scrollPosition);
+  console.log(scrollPosition);
   // Check the scroll position and update the URL accordingly 
   if (scrollPosition <= 100) {
     history.pushState({}, "", "#landing_page");
   } else if (scrollPosition > 100 && scrollPosition <= 720) {
     history.pushState({}, "", "#about_page");
-  } else if (scrollPosition > 720) {
+  } else if (scrollPosition > 720  && scrollPosition <=1800) {
     history.pushState({}, "", "#experience_page");
   }
-  else if (scrollPosition > 920) {
+  else if (scrollPosition > 1800 && scrollPosition <=2400) {
     history.pushState({}, "", "#projects_page");
   }
   else

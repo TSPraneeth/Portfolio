@@ -7,19 +7,19 @@ var additional_section = document.querySelector(".additional");
 
     AOS.init();
 
-//Check if page is reloaded
+// Check if page is reloaded
 
-// if (sessionStorage.getItem('reloaded') != null) {
-//   location.href = "http://127.0.0.1:5500/#header";
-// } else {
-//   console.log('page was not reloaded');
-// }
+if (sessionStorage.getItem('reloaded') != null) {
+  location.href = "https://tspraneeth.github.io/Portfolio/#header";
+} else {
+  console.log('page was not reloaded');
+}
 
-// sessionStorage.setItem('reloaded', 'yes');
+sessionStorage.setItem('reloaded', 'yes');
 
-//Check if page is reloaded ends
+// Check if page is reloaded ends
 
-//To display loading screen before page load
+// To display loading screen before page load
 
 window.addEventListener("scroll",function() {
   const header = document.querySelector(".header_navigation");

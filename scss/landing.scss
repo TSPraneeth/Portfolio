@@ -17,6 +17,72 @@
     // border-bottom: 2px solid;
 }
 
+.absolute { 
+  position: absolute;
+  top: 50px;
+  inset: 0;
+  justify-content: center;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.bg-shape1 {
+  @include bg_shape;
+  animation: one 10s infinite;
+}
+
+.bg-shape2 {
+@include bg_shape;
+  animation: two 10s infinite;
+}
+
+@keyframes one {
+  0% {left:0px; top: 0px;}
+  25% {left:-100px; top: 70px;}
+  50% {left:0px; top: 150px;}
+  75% {left:0px; top: 100px;}
+  100% {left:0px; top: 0px;}
+}
+
+@keyframes two {
+  0% {left:0px; top: 0px;}
+  25% {left: 50px; top: 10px;}
+  50% {left:100px; top: 150px;}
+  75% {left:50px; top: 100px;}
+  100% {left:0px; top: 0px;}
+}
+
+.opacity-50 {
+  opacity: .5;
+}
+
+.bg-blur {
+  filter: blur(90px);
+}
+
+.bg-primary {
+  background-color: $dark_accent;
+}
+
+.bg-teal {
+  background-color: $brand;
+}
+
+.bg-purple {
+  background-color: $accenture;
+}
+
+h1 {
+  margin: 0 auto;
+  top: 200px;
+  text-align: center;
+}
+
+
 .sticky-social{
     position:fixed;
     top:150px;

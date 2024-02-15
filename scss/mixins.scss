@@ -18,3 +18,10 @@
     background-position: center;
     // height: 300px;
 }
+
+@mixin bg_shape{
+    height: 200px;
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    position: relative;
+}

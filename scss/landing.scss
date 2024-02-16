@@ -32,12 +32,12 @@
 
 .bg-shape1 {
   @include bg_shape;
-  animation: one 10s infinite;
+  animation: one 4s infinite;
 }
 
 .bg-shape2 {
 @include bg_shape;
-  animation: two 10s infinite;
+  animation: two 4s infinite;
 }
 
 @keyframes one {

@@ -274,7 +274,7 @@
   aspect-ratio: 1;
   border-radius: 9999px;
   position: relative;
-  animation: one 10s infinite;
+  animation: one 4s infinite;
 }
 
 .bg-shape2 {
@@ -282,7 +282,7 @@
   aspect-ratio: 1;
   border-radius: 9999px;
   position: relative;
-  animation: two 10s infinite;
+  animation: two 4s infinite;
 }
 
 @keyframes one {

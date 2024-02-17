@@ -21,23 +21,12 @@ html {
 }
 
 body {
-    //   background: url("../assets/bg_3.jpg");
-    // background: linear-gradient(#50D5B7, #067D68);
-    // background: rgb(13, 92, 117);
-    // background: linear-gradient(
-    //     135deg,
-    //     rgba(13, 92, 117, 1) 0%,
-    //     rgba(25, 159, 177, 1) 50%,
-    //     rgba(165, 209, 225, 1) 100%
-    // );
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // min-height: 100vh;
     font-family: "Ubuntu", sans-serif;
     color: $dark_shade;
     overflow-x: hidden;
-
     background-color: $light_shade;
 }
 

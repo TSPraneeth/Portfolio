@@ -68,6 +68,11 @@ navLink.forEach(function (link) {
 
 //Go-to specific page based on mobile navigation click ends
 
+//span each letter 
+
+
+//span each letter ends
+
 //Change URL based on scroll
 
 window.addEventListener("scroll", function () {

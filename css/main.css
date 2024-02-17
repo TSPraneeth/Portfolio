@@ -256,17 +256,33 @@
   min-height: 60vh;
 }
 
+.shape_bg {
+  position: absolute;
+  top: 50px;
+  inset: 0;
+  background-color: #896464;
+  height: 200px;
+  width: 200px;
+}
+
+.banner_name {
+  text-transform: uppercase;
+}
+
+.letter:hover {
+  transform: translateY(-20px);
+  transition: transform 300ms;
+  color: #3dc4d3;
+}
+
 .absolute {
   position: absolute;
   top: 50px;
   inset: 0;
-  justify-content: center;
+  justify-content: space-between;
   display: inline-flex;
+  z-index: -1;
   flex-direction: row;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .bg-shape1 {
@@ -282,51 +298,23 @@
   aspect-ratio: 1;
   border-radius: 9999px;
   position: relative;
-  animation: two 4s infinite;
+  animation: one 4s infinite;
+}
+
+.bg-shape3 {
+  height: 200px;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  position: relative;
+  animation: one 4s infinite;
 }
 
 @keyframes one {
   0% {
-    left: 0px;
-    top: 0px;
-  }
-  25% {
-    left: -100px;
-    top: 70px;
-  }
-  50% {
-    left: 0px;
-    top: 150px;
-  }
-  75% {
-    left: 0px;
-    top: 100px;
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
   }
   100% {
-    left: 0px;
-    top: 0px;
-  }
-}
-@keyframes two {
-  0% {
-    left: 0px;
-    top: 0px;
-  }
-  25% {
-    left: 50px;
-    top: 10px;
-  }
-  50% {
-    left: 100px;
-    top: 150px;
-  }
-  75% {
-    left: 50px;
-    top: 100px;
-  }
-  100% {
-    left: 0px;
-    top: 0px;
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
   }
 }
 .opacity-50 {
@@ -342,11 +330,11 @@
 }
 
 .bg-teal {
-  background-color: #896464;
+  background-color: #A100FF;
 }
 
 .bg-purple {
-  background-color: #A100FF;
+  background-color: #896464;
 }
 
 h1 {
@@ -663,7 +651,7 @@ h1 {
 }
 
 .project_1:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: transform 500ms ease-in-out;
 }
 
@@ -673,7 +661,7 @@ h1 {
 }
 
 .project_2:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: transform 500ms ease-in-out;
 }
 
@@ -683,7 +671,7 @@ h1 {
 }
 
 .project_3:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: transform 500ms ease-in-out;
 }
 
@@ -693,7 +681,7 @@ h1 {
 }
 
 .project_4:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: transform 500ms ease-in-out;
 }
 
@@ -703,7 +691,7 @@ h1 {
 }
 
 .project_5:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: transform 500ms ease-in-out;
 }
 
@@ -713,7 +701,7 @@ h1 {
 }
 
 .project_6:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: transform 500ms ease-in-out;
 }
 
@@ -723,7 +711,7 @@ h1 {
 }
 
 .project_7:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: transform 500ms ease-in-out;
 }
 
@@ -733,7 +721,7 @@ h1 {
 }
 
 .project_8:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: transform 500ms ease-in-out;
 }
 

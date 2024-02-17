@@ -1,12 +1,5 @@
 #landing_page {
     padding: 8rem 0;
-    // background: url("../assets/bg_2.jpg");
-    // background: linear-gradient(
-    //      135deg,
-    //      rgba(13, 92, 117, 1) 0%,
-    //      rgba(25, 159, 177, 1) 50%,
-    //      rgba(165, 209, 225, 1) 100%
-    //  );
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -17,17 +10,37 @@
     // border-bottom: 2px solid;
 }
 
+.shape_bg {
+  position: absolute;
+  top: 50px;
+  inset: 0;
+  background-color: $brand;
+  height: 200px;
+  width: 200px;
+}
+
+.banner_name {
+  text-transform: uppercase;
+}
+
+.letter:hover {
+  transform: translateY(-20px);
+  transition: transform 300ms;
+  color: $dark_accent;
+}
+
 .absolute { 
   position: absolute;
   top: 50px;
   inset: 0;
-  justify-content: center;
+  justify-content: space-between;
   display: inline-flex;
+  z-index: -1;
   flex-direction: row;
 }
 
 .justify-center {
-  justify-content: center;
+  // justify-content: center;
 }
 
 .bg-shape1 {
@@ -37,23 +50,24 @@
 
 .bg-shape2 {
 @include bg_shape;
-  animation: two 4s infinite;
+  animation: one 4s infinite;
+}
+
+.bg-shape3 {
+  @include bg_shape;
+  animation: one 4s infinite;
 }
 
 @keyframes one {
-  0% {left:0px; top: 0px;}
-  25% {left:-100px; top: 70px;}
-  50% {left:0px; top: 150px;}
-  75% {left:0px; top: 100px;}
-  100% {left:0px; top: 0px;}
-}
+  0% { 
+    transform: rotate(0deg)  
+          translateX(100px) rotate(0deg); 
+} 
 
-@keyframes two {
-  0% {left:0px; top: 0px;}
-  25% {left: 50px; top: 10px;}
-  50% {left:100px; top: 150px;}
-  75% {left:50px; top: 100px;}
-  100% {left:0px; top: 0px;}
+100% { 
+    transform: rotate(360deg)  
+          translateX(100px) rotate(-360deg); 
+} 
 }
 
 .opacity-50 {
@@ -69,11 +83,11 @@
 }
 
 .bg-teal {
-  background-color: $brand;
+  background-color: $accenture;
 }
 
 .bg-purple {
-  background-color: $accenture;
+  background-color:  $brand;
 }
 
 h1 {

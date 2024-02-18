@@ -19,6 +19,7 @@
   width: 200px;
 }
 
+
 .banner_name {
   text-transform: uppercase;
 }
@@ -37,10 +38,6 @@
   display: inline-flex;
   z-index: -1;
   flex-direction: row;
-}
-
-.justify-center {
-  // justify-content: center;
 }
 
 .bg-shape1 {
@@ -100,9 +97,22 @@ h1 {
 .sticky-social{
     position:fixed;
     top:150px;
-    left:0px;
+    left:-36px;
     padding:0px;
     margin:0px;
+  }
+
+  @media (min-width: 600px) {
+    .sticky-social {
+      left: 0px;
+    }
+    .social li:hover{
+      margin-right:-20px;
+    }
+    .social li:hover .fa{
+      margin-left:20px;
+    
+  }
   }
   .social{
     list-style:none;
@@ -117,7 +127,7 @@ h1 {
    box-shadow:2px 5px 10px grey;
   }
   .social li:hover .fa{
-      margin-left:20px;
+      margin-left:30px;
     
   }
   .fa{

@@ -1,5 +1,6 @@
 /* Preloader start */
 /* Preloader styles */
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 .preloader {
   position: fixed;
   top: 0;
@@ -346,11 +347,22 @@ h1 {
 .sticky-social {
   position: fixed;
   top: 150px;
-  left: 0px;
+  left: -36px;
   padding: 0px;
   margin: 0px;
 }
 
+@media (min-width: 600px) {
+  .sticky-social {
+    left: 0px;
+  }
+  .social li:hover {
+    margin-right: -20px;
+  }
+  .social li:hover .fa {
+    margin-left: 20px;
+  }
+}
 .social {
   list-style: none;
 }
@@ -367,7 +379,7 @@ h1 {
 }
 
 .social li:hover .fa {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .fa {
@@ -968,7 +980,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Electrolize", "Ubuntu", sans-serif;
   color: #2F2C38;
   overflow-x: hidden;
   background-color: #F3EFDB;

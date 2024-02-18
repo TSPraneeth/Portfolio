@@ -5,7 +5,9 @@ const experienceButton = document.querySelectorAll(".experience_buttons .buttons
 var professional_section = document.querySelector(".professional");
 var additional_section = document.querySelector(".additional");
 
-    AOS.init();
+    AOS.init({
+      once: true
+    });
 
 // Check if page is reloaded
 

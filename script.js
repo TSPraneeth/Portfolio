@@ -11,13 +11,13 @@ var additional_section = document.querySelector(".additional");
 
 // Check if page is reloaded
 
-// if (sessionStorage.getItem('reloaded') != null) {
-//   location.href = "https://tspraneeth.github.io/Portfolio/#header";
-// } else {
-//   console.log('page was not reloaded');
-// }
+if (sessionStorage.getItem('reloaded') != null) {
+  location.href = "https://tspraneeth.github.io/Portfolio/#header";
+} else {
+  console.log('page was not reloaded');
+}
 
-// sessionStorage.setItem('reloaded', 'yes');
+sessionStorage.setItem('reloaded', 'yes');
 
 // Check if page is reloaded ends
 

@@ -164,6 +164,7 @@ experienceButton.forEach(function (button) {
         Body: message
     }).then(
         function(response) {
+          alert(response);
             if (response === 'OK') {
                 alert('Email sent successfully!');
                 document.getElementById('contactForm').reset(); // Clear form

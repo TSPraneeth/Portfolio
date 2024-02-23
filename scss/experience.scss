@@ -79,17 +79,45 @@
     grid-area: fountane_internship;
 }
 
+.exp_logo {
+    display: none;
+}
+
+
 @media screen and (min-width: 700px) {
+    .exp_logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .exp_logos {
+        width: 50%;
+    }
+    
+    .accenture_image > img {
+        grid-area: accenture_image;
+    }
+
+    .accenture_image2 > img {
+        grid-area: accenture_image2;
+    }
+
+    .fountane_image > img {
+        grid-area: fountane_image;
+    }
+    
     .professional {
         grid-template-rows: 1fr 1fr;
-        // grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 5rem;
         grid-template-areas:
-        "ase ."
-        ". graduate_internship"
-        "fountane_internship .";
+        "ase accenture_image"
+        "accenture_image2 graduate_internship"
+        "fountane_internship fountane_image";
         transition: all 1s;
     }
+
 }
 
 .additional {
@@ -127,14 +155,31 @@
 }
 
 @media screen and (min-width:700px) {
+
+    .conestoga_image > img {
+        grid-area: conestoga_image;
+    }
+
+    .conestoga_image2 > img {
+        grid-area: conestoga_image2;
+    }
+
+    .conestoga_image3 > img {
+        grid-area: conestoga_image3;
+    }
+
+    .csi_image > img {
+        grid-area: csi_image;
+    }
+    
     .additional {
         grid-template-rows: 1fr 1fr;
-        // grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-            "board_of_governors ."
-            ". leadership_assistant"
-            "fitness ."
-            ". student_ambassador";
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "board_of_governors conestoga_image"
+        "csi_image leadership_assistant"
+        "fitness conestoga_image2"
+        "conestoga_image3 student_ambassador";
         gap: 5rem;
     }
 }

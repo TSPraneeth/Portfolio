@@ -5,19 +5,23 @@ const experienceButton = document.querySelectorAll(".experience_buttons .buttons
 var professional_section = document.querySelector(".professional");
 var additional_section = document.querySelector(".additional");
 
+document.addEventListener('DOMContentLoaded', function() {
     AOS.init({
-      once: true
+      duration: 400,
+      offset: 100,
+      easing: "linear"
     });
+  });
 
 // Check if page is reloaded
 
-if (sessionStorage.getItem('reloaded') != null) {
-  location.href = "https://tspraneeth.github.io/Portfolio/#header";
-} else {
-  console.log('page was not reloaded');
-}
+// if (sessionStorage.getItem('reloaded') != null) {
+//   location.href = "https://tspraneeth.github.io/Portfolio/#header";
+// } else {
+//   console.log('page was not reloaded');
+// }
 
-sessionStorage.setItem('reloaded', 'yes');
+// sessionStorage.setItem('reloaded', 'yes');
 
 // Check if page is reloaded ends
 
@@ -58,6 +62,19 @@ wrapper.addEventListener("click", () => {
 
 //hamburger-menu ends
 
+//wrapping each letter in a span 
+span_letters('banner_name');
+span_letters('banner_role');
+
+function span_letters(banner) {
+  var banner_namee = document.querySelector('.'+banner).textContent;
+  var text_wrapped = banner_namee.replace(/\w/g, '<span>$&</span>');
+
+  document.querySelector('.'+banner).innerHTML = text_wrapped;
+}
+
+//wrapping each letter in a span ends
+
 //Go-to specific page based on mobile navigation click
 
 navLink.forEach(function (link) {
@@ -79,7 +96,6 @@ navLink.forEach(function (link) {
 
 window.addEventListener("scroll", function () {
   var scrollPosition = window.scrollY;
-  console.log(scrollPosition);
   // Check the scroll position and update the URL accordingly 
   if (scrollPosition <= 100) {
     history.pushState({}, "", "#landing_page");

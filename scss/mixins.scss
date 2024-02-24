@@ -25,3 +25,15 @@
     border-radius: 9999px;
     position: relative;
 }
+
+@mixin download_button {
+    text-decoration: none;
+    color: $dark_shade;
+    padding: 1rem .8rem;
+    border-radius: 30px;
+    background-color: $light_shade;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+}

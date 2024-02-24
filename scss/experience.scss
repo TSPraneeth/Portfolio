@@ -15,6 +15,12 @@
 .experience_buttons {
     margin: 2rem 0;
     text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.experience_buttons > a {
+    position: relative;
 }
 
 .buttons {
@@ -22,22 +28,28 @@
     margin: 2rem 0;
     padding: 1rem 1rem;
     color: $dark_shade;
-    // border-bottom: 1px solid;
-    border-radius: 0.5rem;
-    // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.buttons:hover {
-    background-color: transparent;
+.buttons::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background-color: $brand;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in;
+}
+
+.buttons.active::after {
+    transform: scaleX(1);
+    transform-origin: center;
 }
 
 .buttons.active {
-    // border-bottom: 1px solid $dark_accent;
-    box-shadow: rgba(137, 100, 100, 0.5) 0px 13px 27px -5px, rgba(137, 100, 100, 0.5) 0px 8px 16px -8px;
-    color: $brand;
     font-weight: 600;
-    transition: 500ms linear;
-    // transform: 2000ms;
+    color: $brand;
 }
 
 .professional {
@@ -171,7 +183,7 @@
     .csi_image > img {
         grid-area: csi_image;
     }
-    
+
     .additional {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;

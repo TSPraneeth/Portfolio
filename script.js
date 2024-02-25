@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Check if page is reloaded
 
 if (sessionStorage.getItem('reloaded') != null) {
-  location.href = "https://praneeth-tatikonda.vercel.app/";
+  location.href = "https://praneeth-tatikonda.vercel.app/#landing_page";
 } else {
   console.log('page was not reloaded');
 }

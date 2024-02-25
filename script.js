@@ -79,8 +79,7 @@ function span_letters(banner) {
   }
 }
 
-// Event listener for screen resize
-window.addEventListener('resize', function () {
+function screenSize() {
   var screenWidth = window.innerWidth;
   console.log(screenWidth);
 
@@ -101,6 +100,13 @@ window.addEventListener('resize', function () {
     span_letters('banner_name');
     span_letters('banner_role');
   }
+}
+
+screenSize();
+
+// Event listener for screen resize
+window.addEventListener('resize', function () {
+ screenSize();
 });
 
 

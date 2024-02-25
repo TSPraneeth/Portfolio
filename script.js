@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Check if page is reloaded
 
-// if (sessionStorage.getItem('reloaded') != null) {
-//   location.href = "https://tspraneeth.github.io/Portfolio/#header";
-// } else {
-//   console.log('page was not reloaded');
-// }
+if (sessionStorage.getItem('reloaded') != null) {
+  location.href = "https://praneeth-tatikonda.vercel.app/";
+} else {
+  console.log('page was not reloaded');
+}
 
-// sessionStorage.setItem('reloaded', 'yes');
+sessionStorage.setItem('reloaded', 'yes');
 
 // Check if page is reloaded ends
 
@@ -192,3 +192,22 @@ experienceButton.forEach(function (button) {
                 // Optionally, display an error message to the user
             });
     });
+
+    // Disable right-click
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+  )
+    return false;
+};

@@ -142,55 +142,15 @@ experienceButton.forEach(function (button) {
 
 //Experience buttons change ends
 
-  //Contact form starts
-
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    sendEmail();
-  });
-  
-  // function sendEmail() {
-  //   Email.send({
-  //       Host: "smtp.gmail.com",
-  //       Username: "tspraneeth987@gmail.com",
-  //       Password: "DD1DE07E83F280F18E6AFD42312E472D66D2",
-  //       To: 'tspraneeth987@gmail.com',
-  //       From: document.getElementById('email').value,
-  //       Subject: "Contact Form Submission",
-  //       Body: "Name: " + document.getElementById('name').value + "<br>Email: " + document.getElementById('email').value + "<br>Message: " + document.getElementById('message').value
-  //   }).then(
-  //       message => alert("Email sent successfully")
-  //   );
-  // }
-  
-  //Contact form ends
-
-  function sendEmail() {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-
-    Email.send({
-        Host: "smtp.gmail.com", // Enter your SMTP server hostname
-        Username: "tspraneeth987@gmail.com", // Enter your SMTP username
-        Password: "DD1DE07E83F280F18E6AFD42312E472D66D2", // Enter your SMTP password
-        To: 'tspraneeth987@gmail.com', // Enter recipient email address
-        From: email,
-        Subject: 'Message from ' + name,
-        Body: message
-    }).then(
-        function(response) {
-          alert(response);
-            if (response === 'OK') {
-                alert('Email sent successfully!');
-                document.getElementById('contactForm').reset(); // Clear form
-            } else {
-                alert('Failed to send email. Please try again later.');
-            }
-        },
-        function(error) {
-            console.error('Error:', error);
-            alert('Error occurred while sending email. Please try again later.');
-        }
-    );
-}
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting via the browser
+        // Your EmailJS code to send the email
+        emailjs.sendForm('service_k1tshyv', 'template_k2lnggi', this)
+            .then(function(response) {
+                console.log('Email sent successfully:', response);
+                // Optionally, display a success message to the user
+            }, function(error) {
+                console.error('Error sending email:', error);
+                // Optionally, display an error message to the user
+            });
+    });

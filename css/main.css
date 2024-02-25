@@ -262,7 +262,6 @@
   text-decoration: none;
   color: #2F2C38;
   padding: 1rem 0.8rem;
-  border-radius: 30px;
   background-color: #F3EFDB;
   width: 50%;
   text-align: center;
@@ -868,12 +867,12 @@ textarea {
 }
 
 #name, #email, #message {
-  color: #3dc4d3;
+  color: #2F2C38;
   font-weight: 600;
 }
 
 #name:focus, #email:focus, #message:focus {
-  border-bottom-color: #3dc4d3;
+  border-bottom-color: #2F2C38;
 }
 
 textarea {
@@ -970,7 +969,6 @@ input[type=submit]:hover {
   text-decoration: none;
   color: #2F2C38;
   padding: 1rem 0.8rem;
-  border-radius: 30px;
   background-color: #F3EFDB;
   width: 50%;
   text-align: center;

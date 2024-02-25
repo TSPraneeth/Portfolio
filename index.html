@@ -17,6 +17,14 @@
     <title>Praneeth Tatikonda</title>
     <link rel="icon" type="image/svg" href="./assets/title.svg" />
     <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("l2hsSM2EJc0gRXuAq");
+   })();
+</script>
 
 </head>
 
@@ -494,7 +502,7 @@
                     <a id="downloadLink" href="./Resume  - Praneeth Tatikonda.pdf" target="_blank" type="application/octet-stream"
                         download="Praneeth Tatikonda.pdf">Download Resume</a>
                 </div>
-                <form id="contactForm" onsubmit="sendEmail(); reset(); return false">
+                <form id="contactForm">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required><br><br>
                     <label for="email">Email ID:</label>

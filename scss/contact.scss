@@ -64,12 +64,12 @@ textarea {
 }
 
 #name, #email, #message {
-  color: $dark_accent;
+  color: $dark_shade;
   font-weight: 600;
 }
 
 #name:focus, #email:focus, #message:focus {
-  border-bottom-color: $dark_accent;
+  border-bottom-color: $dark_shade;
 }
 
 textarea {

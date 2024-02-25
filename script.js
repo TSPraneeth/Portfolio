@@ -63,15 +63,47 @@ wrapper.addEventListener("click", () => {
 //hamburger-menu ends
 
 //wrapping each letter in a span 
-span_letters('banner_name');
-span_letters('banner_role');
+// Function to wrap each letter of a text with <span> tags if screen width is greater than 600px
+var spaceAdded = false; // Flag to track whether space has been added
 
 function span_letters(banner) {
-  var banner_namee = document.querySelector('.'+banner).textContent;
-  var text_wrapped = banner_namee.replace(/\w/g, '<span>$&</span>');
-
-  document.querySelector('.'+banner).innerHTML = text_wrapped;
+  var bannerElement = document.querySelector('.' + banner);
+  if (bannerElement && window.innerWidth > 600 && !spaceAdded) { // Check if space has not been added yet
+    var bannerText = bannerElement.textContent.trim(); // Trim to remove leading/trailing spaces
+    var words = bannerText.split(' '); // Split text into words
+    var textWrapped = words.map(function(word) {
+      return word.replace(/\w/g, '<span>$&</span>'); // Wrap each letter of the word with <span> tags
+    }).join('&nbsp; '); // Join words with a space
+    bannerElement.innerHTML = textWrapped;
+    spaceAdded = true; // Update flag to indicate space has been added
+  }
 }
+
+// Event listener for screen resize
+window.addEventListener('resize', function () {
+  var screenWidth = window.innerWidth;
+  console.log(screenWidth);
+
+  if (screenWidth <= 600) {
+    // Revert to original structure when screen width is less than or equal to 600px
+    var bannerNameElement = document.querySelector('.banner_name');
+    if (bannerNameElement) {
+      bannerNameElement.innerHTML = 'Praneeth Tatikonda';
+    }
+
+    var bannerRoleElement = document.querySelector('.banner_role');
+    if (bannerRoleElement) {
+      bannerRoleElement.innerHTML = 'Front-end Web Developer';
+    }
+    spaceAdded = false; // Reset flag when screen width is less than or equal to 600px
+  } else {
+    // Call the function for each banner if needed when screen width is greater than 600px
+    span_letters('banner_name');
+    span_letters('banner_role');
+  }
+});
+
+
 
 //wrapping each letter in a span ends
 

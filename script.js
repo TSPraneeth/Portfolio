@@ -185,7 +185,7 @@ experienceButton.forEach(function (button) {
         // Your EmailJS code to send the email
         emailjs.sendForm('service_k1tshyv', 'template_k2lnggi', this)
             .then(function(response) {
-                console.log('Email sent successfully:', response);
+                alert('Thank you for your Email. I will get back to you soon');
                 // Optionally, display a success message to the user
             }, function(error) {
                 console.error('Error sending email:', error);
